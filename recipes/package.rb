@@ -72,6 +72,14 @@ directory node['php']['upload_dir'] do
   action :create
 end
 
+directory node['php']['ext_conf_dir'] do
+  owner 'root'
+  group 'root'
+  mode 01755
+  recursive true
+  action :create
+end
+
 # Inherited from Debian packages, made universal, session cleanup script
 template '/usr/local/bin/php-maxlifetime' do
   source 'php-maxlifetime.sh.erb'
