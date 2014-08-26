@@ -26,13 +26,6 @@ lib = value_for_platform_family(
   'debian' => '/var/lib/php5'
 )
 
-if node['recipes'].include?('php::fpm')
-  svc = value_for_platform_family(
-      [ 'rhel', 'fedora' ] => 'php-fpm',
-      'debian' => 'php5-fpm'
-  )
-end
-
 if platform_family?('rhel')
   %w{ httpd-devel pcre pcre-devel }.each { |pkg| package pkg }
 end
@@ -101,6 +94,6 @@ template "#{node['php']['ext_conf_dir']}/00-opcache.ini" do
     :ext_dir => ext_dir
   })
   if node['recipes'].include?('php::fpm')
-    notifies :restart, "service[#{svc}]"
+    notifies :restart, "service[php-fpm]"
   end
 end
