@@ -66,6 +66,15 @@ template node['php']['fpm_rotfile'] do
   mode 00644
 end
 
+if platform?('ubuntu') && node['platform_version'].to_f >= 12.04
+    template "/etc/init/php5-fpm.conf" do
+        source 'php5-upstart.conf'
+        owner 'root'
+        group 'root'
+        mode 00644
+    end
+end
+
 # Since we do not have any pool files we do not attempt to start the service
 service "php-fpm" do
   service_name('php5-fpm') if platform_family?('debian')
