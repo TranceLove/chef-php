@@ -1,6 +1,7 @@
 # Author:: Panagiotis Papadomitsos (pj@ezgr.net)
+# Author:: TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Attribute:: versions
 #
 # Copyright 2011, Opscode, Inc.
@@ -37,4 +38,3 @@ else
   default['php']['packages'] = %w{ php5-cgi php5 php5-dev php5-cli php-pear }
   default['php']['fpm_package'] = 'php5-fpm'
 end
-

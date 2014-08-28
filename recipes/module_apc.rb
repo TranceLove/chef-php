@@ -2,8 +2,9 @@
 # Author::  Joshua Timberman (<joshua@opscode.com>)
 # Author::  Seth Chisamore (<schisamo@opscode.com>)
 # Author::  Panagiotis Papadomitsos (<pj@ezgr.net>)
+# Author::  TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Recipe:: module_apc
 #
 # Copyright 2009-2011, Opscode, Inc.
@@ -30,7 +31,7 @@ when 'rhel', 'fedora'
   end
 
   package 'php-pecl-apc' do
-    package_name 'php5-apc' if node['recipes'].include?('php::dotdeb')
+    package_name 'php5-apc' if node['recipes'].include?('chefphp::dotdeb')
     action :install
   end
 

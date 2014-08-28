@@ -1,6 +1,7 @@
 #
 # Author:: Seth Chisamore <schisamo@opscode.com>
-# Cookbook Name:: php
+# Author:: TranceLove (airwave209gt@gmail.com)
+# Cookbook Name:: chefphp
 # Resource:: pear_channel
 #
 # Copyright:: 2011, Opscode, Inc <legal@opscode.com>

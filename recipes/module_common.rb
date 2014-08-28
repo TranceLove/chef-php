@@ -1,7 +1,8 @@
 #
 # Author::  Panagiotis Papadomitsos (<pj@ezgr.net>)
+# Author::  TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Recipe:: module_common
 #
 # Copyright 2009-2011, Opscode, Inc.

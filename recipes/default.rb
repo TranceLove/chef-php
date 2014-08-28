@@ -1,7 +1,8 @@
 #
 # Author::  Joshua Timberman (<joshua@opscode.com>)
 # Author::  Seth Chisamore (<schisamo@opscode.com>)
-# Cookbook Name:: php
+# Author::  TranceLove (airwave209gt@gmail.com)
+# Cookbook Name:: chefphp
 # Recipe:: default
 #
 # Copyright 2009-2011, Opscode, Inc.
@@ -19,13 +20,13 @@
 # limitations under the License.
 #
 
-include_recipe 'php::package'
+include_recipe 'chefphp::package'
 
 # update the main channels
-php_pear_channel 'pear.php.net' do
+chefphp_pear_channel 'pear.php.net' do
   action :update
 end
 
-php_pear_channel 'pecl.php.net' do
+chefphp_pear_channel 'pecl.php.net' do
   action :update
 end

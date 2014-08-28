@@ -1,7 +1,8 @@
 #
 # Author::  Joshua Timberman (<joshua@opscode.com>)
 # Author::  Seth Chisamore (<schisamo@opscode.com>)
-# Cookbook Name:: php
+# Author::  TranceLove (airwave209gt@gmail.com)
+# Cookbook Name:: chefphp
 # Recipe:: module_fpdf
 #
 # Copyright 2009-2011, Opscode, Inc.

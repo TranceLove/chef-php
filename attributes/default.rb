@@ -1,8 +1,9 @@
 #
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Author:: Panagiotis Papadomitsos (pj@ezgr.net)
+# Author:: TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Attribute:: default
 #
 # Copyright 2011, Opscode, Inc.

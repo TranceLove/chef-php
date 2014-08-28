@@ -1,8 +1,9 @@
 #
 # Author::  Seth Chisamore (<schisamo@opscode.com>)
 # Author::  Panagiotis Papadomitsos (<pj@ezgr.net>)
+# Author::  TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Recipe:: package
 #
 # Copyright 2011, Opscode, Inc.
@@ -23,7 +24,7 @@
 if node['php']['use_atomic_repo']
   include_recipe 'yumrepo::atomic' if platform_family?('rhel')
 end
- 
+
 include_recipe 'apt' if platform_family?('debian')
 
 # Make sure the Apt cache is updated
@@ -43,10 +44,10 @@ template "#{node['php']['conf_dir']}/php.ini" do
   owner 'root'
   group 'root'
   mode 00644
-  notifies :restart, 'service[php-fpm]' if node['recipes'].include?('php::fpm') && platform_family?('rhel', 'fedora')
+  notifies :restart, 'service[php-fpm]' if node['recipes'].include?('chefphp::fpm') && platform_family?('rhel', 'fedora')
 end
 
-service 'php-fpm' if node['recipes'].include?('php::fpm') && platform_family?('rhel', 'fedora')
+service 'php-fpm' if node['recipes'].include?('chefphp::fpm') && platform_family?('rhel', 'fedora')
 
 template "#{node['php']['cgi_conf_dir']}/php.ini" do
   source 'php.ini.erb'

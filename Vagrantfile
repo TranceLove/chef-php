@@ -18,7 +18,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-  
+
 Vagrant.configure('2') do |config|
 
   config.berkshelf.enabled = true
@@ -37,9 +37,9 @@ Vagrant.configure('2') do |config|
     chef.arguments = '-Fdoc'
     chef.json = { 'php' => { 'tmpfs' => false } }
     chef.run_list = [
-      'recipe[php]',
-      'recipe[php::module_common]',
-      'recipe[php::module_opcache]'
+      'recipe[chefphp]',
+      'recipe[chefphp::module_common]',
+      'recipe[chefphp::module_opcache]'
     ]
 
   end

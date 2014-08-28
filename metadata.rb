@@ -1,4 +1,4 @@
-name              'php'
+name              'chefphp'
 maintainer        'Panagiotis Papadomitsos'
 maintainer_email  'pj@ezgr.net'
 license           'Apache Public License 2.0'

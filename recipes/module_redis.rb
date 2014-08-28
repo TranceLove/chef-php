@@ -1,7 +1,7 @@
 #
 # Author:: TranceLove (<airwave209gt@gmail.com>)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Recipe:: module_redis
 #
 # Copyright 2014, TranceLove

@@ -1,7 +1,8 @@
 #
 # Author:: Panagiotis Papadomitsos (pj@ezgr.net)
+# Author:: TranceLove (airwave209gt@gmail.com)
 #
-# Cookbook Name:: php
+# Cookbook Name:: chefphp
 # Recipe:: module_opcache
 #
 # Copyright:: 2013, Panagiotis Papadomitsos
@@ -93,7 +94,7 @@ template "#{node['php']['ext_conf_dir']}/00-opcache.ini" do
   variables({
     :ext_dir => ext_dir
   })
-  if node['recipes'].include?('php::fpm')
+  if node['recipes'].include?('chefphp::fpm')
     notifies :restart, "service[php-fpm]"
   end
 end
