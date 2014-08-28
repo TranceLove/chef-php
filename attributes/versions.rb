@@ -1,3 +1,5 @@
+# encoding: utf-8
+#
 # Author:: Panagiotis Papadomitsos (pj@ezgr.net)
 # Author:: TranceLove (airwave209gt@gmail.com)
 #

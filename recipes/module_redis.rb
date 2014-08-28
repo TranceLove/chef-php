@@ -1,3 +1,4 @@
+# encoding: utf-8
 #
 # Author:: TranceLove (<airwave209gt@gmail.com>)
 #
