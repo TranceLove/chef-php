@@ -25,7 +25,7 @@ action :add do
 	new_resource.updated_by_last_action(false)
 	Chef::Log.info("Creating new PHP-FPM instance for #{new_resource.name}")
 	a = template "#{node['php']['fpm_pool_dir']}/#{new_resource.name}.conf" do
-		cookbook 'php'
+		cookbook 'chefphp'
 		source 'fpm-instance.erb'
 		owner 'root'
 		group 'root'
