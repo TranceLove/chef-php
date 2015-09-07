@@ -79,3 +79,5 @@ default['php']['ini_settings'] = {
 
 default['php']['tmpfs'] = true
 default['php']['tmpfs_size'] = '128M'
+
+default['php']['phpredis_igbinary']['version'] = '2.2.7'
