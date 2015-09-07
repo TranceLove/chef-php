@@ -36,7 +36,7 @@ template "#{node['php']['fpm_conf_dir']}/php.ini" do
   source 'php.ini.erb'
   owner 'root'
   group 'root'
-  notifies :restart, "service[php-fpm]"
+  notifies :start, "service[php-fpm]"
   mode 00644
   only_if { platform_family?('debian') }
 end
